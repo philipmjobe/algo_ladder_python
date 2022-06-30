@@ -5,61 +5,65 @@
 
 # In this game, there is a list of words present, out of which our interpreter will choose 1 random word. The user first has to input their names and then, will be asked to guess any alphabet. If the random word contains that alphabet, it will be shown as the output(with correct placement) else the program will ask you to guess another alphabet. The user will be given 12 turns(which can be changed accordingly) to guess the complete word.
 
-import random
+# import random
 
-name = input("What is your name? ")
+# name = input("What is your name? ")
 
-print("Good Luck !", name)
+# print("Good Luck !", name)
 
-words = [
-    'rainbow',
-    'computer',
-    'science'
-    'programming',
-    'python',
-    'mathematics',
-    'player',
-    'condition',
-    'reverse',
-    'water',
-    'board',
-    'geeks'
-]
+# words = [
+#     'rainbow',
+#     'computer',
+#     'science'
+#     'programming',
+#     'python',
+#     'mathematics',
+#     'player',
+#     'condition',
+#     'reverse',
+#     'water',
+#     'board',
+#     'geeks'
+# ]
 
-word = random.choice(words)
+# word = random.choice(words)
 
-print("Guess the characters")
+# print("Guess the characters")
 
-guesses = ''
+# guesses = ''
 
-turns = 12
+# turns = 12
 
-while turns > 0:
-    failed = 0
-    for char in word:
-        if char in guesses:
-            print(char, end=" ")
-        else:
-            print("_")
-            print(char, end=" ")
-            failed += 1
+# while turns > 0:
+#     failed = 0
+#     for char in word:
+#         if char in guesses:
+#             print(char, end=" ")
+#         else:
+#             print("_")
+#             print(char, end=" ")
+#             failed += 1
 
-        if failed == 0:
-            print("You Win")
-            print("The word is: ", word)
-            break
+#         if failed == 0:
+#             print("You Win")
+#             print("The word is: ", word)
+#             break
 
-        print()
-        guess = input("guess a character:")
+#         print()
+#         guess = input("guess a character:")
 
-        guesses += guess
+#         guesses += guess
 
-        if guess not in word:
-            turns -= 1
+#         if guess not in word:
+#             turns -= 1
 
-            print("Wrong")
+#             print("Wrong")
 
-            print("You have", + turns, 'more guesses')
+#             print("You have", + turns, 'more guesses')
 
-            if turns == 0:
-                print("You Loose")
+#             if turns == 0:
+#                 print("You Loose")
+
+# Example 2: Word guessing game using python
+
+# In this game, the user needs to enter 5 letter word, if any alphabet is present in the magic word that word will be shown yellow and if the alphabet is present at the same position alphabet will turn green, and if the alphabet is not present in the word then alphabet will become black.
