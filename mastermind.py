@@ -1,3 +1,6 @@
+# This implementation of the mastermind game will have two sets of code one for easy and one for hard both taken and inputted by hand from geeksforgeeks
+
+
 # Rules of the game
 # Two players play the game against each other
 # let’s assume Player 1 and Player 2.
