@@ -16,3 +16,55 @@
 # Moving up can be done by taking transpose then moving left.
 # Moving down can be done by taking transpose the moving right.
 # All the logic in the program are explained in detail in the comments. Highly recommended to go through all the comments.
+
+
+import logic
+
+if __name__ == '__main__':
+    mat = logic.start_game
+
+while(True):
+    x = input("Press the command : ")
+
+    if (x == 'W' or x == 'w'):
+        mat, flag = logic.move_up(mat)
+
+        status = logic.get_current_state(mat)
+        print(status)
+
+        if (status == 'Game Not Over'):
+            logic.add_new_2(mat)
+        else:
+            break
+
+    elif (x == 'S' or x == 's'):
+        mat, flag = logic.move_down(mat)
+        status = logic.get_current_state(mat)
+        print(status)
+        if (status == 'Game Not Over'):
+            logic.add_new_2(mat)
+        else:
+            break
+
+    elif (x == 'A' or x == 'a'):
+        mat, flag = logic.move_left(mat)
+        status = logic.get_current_state(mat)
+        print(status)
+        if (status == 'Game Not Over'):
+            logic.add_new_2(mat)
+        else:
+            break
+
+    elif (x == 'D' or x == 'd'):
+        mat, flag = logic.move_right(mat)
+        status = logic.get_current_state(mat)
+        print(status)
+        if (status == 'Game Not Over'):
+            logic.add_new_2(mat)
+        else:
+            break
+
+    else:
+        print("Invaild Key Pressed")
+
+    print(mat)
