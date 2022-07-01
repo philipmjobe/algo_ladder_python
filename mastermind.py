@@ -16,49 +16,51 @@
 
 # We shall not be using any of the Pygame Libraries, to aid us with additional graphics, and therefore shall be dealing only with the framework and concept. Furthermore, we are going to be playing against the Computer i.e, the Computer would generate the number to be guessed.
 
-import random
+# import random
 
-num = random.randrange(1000, 10000)
+# num = random.randrange(1000, 10000)
 
-n = int(input("Guess the 4 digit number:"))
+# n = int(input("Guess the 4 digit number:"))
 
-if (n == num):
-    print("Great! You guessed the number in just 1 try! You're a Mastermind!")
-else:
-    ctr = 0
+# if (n == num):
+#     print("Great! You guessed the number in just 1 try! You're a Mastermind!")
+# else:
+#     ctr = 0
 
-    while (n != num):
-        ctr += 1
-        count = 0
+#     while (n != num):
+#         ctr += 1
+#         count = 0
 
-        n = str(n)
+#         n = str(n)
 
-        num = str(num)
+#         num = str(num)
 
-        correct = ['X'] * 4
+#         correct = ['X'] * 4
 
-        for i in range(0, 4):
-            if (n[i] == num[i]):
-                count += 1
-                correct[i] = n[i]
+#         for i in range(0, 4):
+#             if (n[i] == num[i]):
+#                 count += 1
+#                 correct[i] = n[i]
 
-            else:
-                continue
+#             else:
+#                 continue
 
-        if (count < 4) and (count != 0):
-            print("Not quite the number. But you did get ",
-                  count, "digit(s) correct!")
-            print("Also these numbers in your input were correct.")
-            for k in correct:
-                print(k, end=' ')
-            print('\n')
-            print('\n')
-            n = int(input("Enter your next choice of numbers: "))
+#         if (count < 4) and (count != 0):
+#             print("Not quite the number. But you did get ",
+#                   count, "digit(s) correct!")
+#             print("Also these numbers in your input were correct.")
+#             for k in correct:
+#                 print(k, end=' ')
+#             print('\n')
+#             print('\n')
+#             n = int(input("Enter your next choice of numbers: "))
 
-        elif (count == 0):
-            print("None of the numbers in your input match.")
-            n = int(input("Enter your next choice of numbers: "))
+#         elif (count == 0):
+#             print("None of the numbers in your input match.")
+#             n = int(input("Enter your next choice of numbers: "))
 
-    if n == num:
-        print("You've become a Mastermind!")
-        print("It took you only", ctr, "tries.")
+#     if n == num:
+#         print("You've become a Mastermind!")
+#         print("It took you only", ctr, "tries.")
+
+# You can make the game harder by either increasing the number of digits of the input or by not disclosing which numbers in the input were correctly placed.
