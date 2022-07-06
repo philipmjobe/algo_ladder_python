@@ -6,6 +6,12 @@ root.title("Welcome")
 
 root.geometry('350x200')
 
+menu = Menu(root)
+item = Menu(menu)
+item.add_command(label='New')
+menu.add_cascade(label='File', menu=item)
+root.config(menu=menu)
+
 lbl = Label(root, text="Howdy")
 lbl.grid()
 
