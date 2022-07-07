@@ -52,3 +52,22 @@ def __init__(self):
                               command=self.computePayment).grid(row=6, column=2, sticky=E)
 
     window.mainloop()
+
+
+def computePayment(self):
+
+    monthlyPayment = self.getMonthlyPayment(float(self.loanAmountVar.get()), float(
+        self.annualInterestRateVar.get()) / 1200, int(self.numberOfYearsVar.get))
+
+    self.monthlyPaymentVar.set(format(monthlyPayment, '10.2f'))
+    totalPayment = float(self.monthlyPaymentVar.get()) * \
+        12 * int(self.numberOfYearsVar.get())
+
+    self.totalPaymentVar.set(format(totalPayment, '10.2f'))
+
+
+def getMonthlyPayment(self, loanAmount, monthlyInterestRate, numberOfYears):
+    monthlyPayment = loanAmount * monthlyInterestRate / \
+        (1 - 1 / (1 + monthlyInterestRate) ** (numberOfYears))
+
+    return monthlyPayment
