@@ -9,6 +9,7 @@
 # Finally, create four buttons and provide your social media links using “webbrowser” module.
 # And you have to download/create four images to represent your social media links.
 
+from cgitb import text
 from tkinter import *
 import tkinter as tk
 from tkinter.ttk import Progressbar
@@ -125,3 +126,43 @@ class converter():
                            bg="#add8e6", bd=0, command=lambda: self.select('m'))
 
         self.menu.place(x=0, y=0)
+
+        self.inp_stg = StringVar()
+        self.inp = Entry(win, bg="#add8e6", fg="white", font=(
+            "Helvetica", 14), text=self.inp_stg, bd=1)
+
+        self.inp.place(x=120, y=100, width=116, height=40)
+        self.inp.bind('', self.operation)
+        self.inp.bind('', self.operation)
+
+        self.lb_menu = unit["lb"]
+        self.lb = Listbox(win, selectmode=SINGLE, height=0)
+
+        self.lb.bind('<>', self.option)
+
+        self.disp = Label(win, text=self.lb_menu[0], bg="white", fg="black")
+        self.disp.place(x=120, y=160, width=100, height=20)
+
+        self.down = PhotoImage(file=r"down.png")
+        scroll_upr = Button(win, image=self.down, width=14,
+                            height=18, bd=0, command=lambda: self.select(0))
+
+        scroll_upr.place(x=220, y=160)
+
+        self.opt_stg = StringVar()
+
+        self.opt = Entry(win, bg="#189AB4", fg="black", font=(
+            "Helvetica", 14), text=self.opt_stg, bd=1)
+
+        self.opt.place(x=120, y=350, width=116, height=40)
+        self.opt.bind('', self.operation)
+
+        self.lb1 = Listbox(win, selectmode=SINGLE, height=0)
+        self.lb1.bind('<>', self.option)
+
+        for i in range(len(self.lb_menu)):
+            self.lb1.insert(i, self.lb_menu[i])
+            self.lb.insert(i, self.lb_menu[i])
+
+        self.disp1 = Label(win, text=self.lb_menu[1], bg="#ffffff", fg="black")
+        self.disp1.place(x=120, y=410, width=100, height=20)
