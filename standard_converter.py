@@ -8,3 +8,86 @@
 # Create one “ttk.Progressbar” which gives us loading effect.
 # Finally, create four buttons and provide your social media links using “webbrowser” module.
 # And you have to download/create four images to represent your social media links.
+
+from tkinter import *
+import tkinter as tk
+from tkinter.ttk import Progressbar
+from time import sleep
+import webbrowser
+
+
+class intro():
+
+    def __init__(self):
+        wind.deiconify()
+        wind.resizable(0, 0)
+        wind.configure(bg="#008080")
+        wind.title("Unit Converter")
+
+        icon = PhotoImage(file=r"convert.png")
+        wind.iconphoto(False, icon)
+
+        center(wind, 500, 230)
+
+        entry = Label(wind, bg="#008080", fg="white", text="Welcome to the Unit Converter", font=(
+            "Footlight MT Light", 15, "bold"))
+
+        entry.place(x=50, y=30, width=410, height=30)
+
+        self.load = Progressbar(wind, orient=HORIZONTAL,
+                                length=250, mode="indeterminate")
+
+        self.start = Button(wind, bg="#f5f5f5", fg="black",
+                            text="START", command=self.loading)
+
+        self.start.place(x=200, y=90, width=80, height=30)
+
+        follow = Label(wind, bg="#008080", fg="white",
+                       text="Follow Me On", font=("Helvetica", 12, "bold"))
+
+        follow.place(x=186, y=150, width=104, height=20)
+
+        self.git = PhotoImage(file=r'gforg.png')
+        github = Button(wind, image=self.git, bg="white", relief=FLAT,
+                        command=lambda: self.links("xxxx"), cursor="hand2")
+
+        github.place(x=110, y=190, width=30, height=30)
+
+        self.instag = PhotoImage(file=r'ins.png')
+        insta = Button(wind, image=self.instag, bg="#008080", relief=FLAT,
+                       command=lambda: self.links("xxxx"), cursor="hand2")
+
+        insta.place(x=190, y=90, width=30, height=30)
+
+        self.fcb = PhotoImage(file=r'fb.png')
+
+        fb = Button(wind, image=self.fcb, bg="white", relief=FLAT,
+                    command=lambda: self.links("xxxx"), cursor="hand2")
+
+        fb.place(x=270, y=190, width=30, height=30)
+
+        self.tweet = PhotoImage(file=r'twitter.png')
+
+        twitter = Button(wind, image=self.tweet, bg="white", relief=FLAT,
+                         command=lambda: self.links("xxxx"), cursor="hand2")
+
+        twitter.place(x=350, y=190, width=30, height=30)
+
+    def links(self, url):
+        webbrowser.get(
+            "C:/Program File" + " (x86)/Google/Chrome/Application/chrome.exe" + " %s --incognito").open(url)
+
+    def loading(self):
+
+        self.start.place(x=0, y=0, width=0, height=0)
+        self.load.place(x=120, y=100)
+
+        wind.update()
+
+        c = 0
+
+        while(c100):
+            shift("Length")
+
+
+class converter():
