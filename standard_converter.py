@@ -91,3 +91,37 @@ class intro():
 
 
 class converter():
+
+    def __init__(self, unit):
+        win.deiconify()
+
+        win.resizable(0, 0)
+        win.title("Converter")
+        icon = PhotoImage(file=r'convert.png')
+        win.iconphoto(False, icon)
+
+        center(win, 350, 500)
+
+        self.unit = unit
+
+        upr = Label(win, bg="#add8e6", width=400, height=250)
+        upr.place(x=0, y=0)
+
+        lwr = Label(win, bg="#189AB4", width=400, height=250, bd=0)
+        lwr.place(x=0, y=0)
+
+        self.menu_lb = Listbox(win, selectmode=SINGLE,
+                               height=0, font=("Helvetica", 10))
+
+        self.menu_lb.bind('<>', self.option)
+
+        options = ("", "", "Length", "Temperature", "Speed", "Time", "Mass")
+
+        for i in range(len(options)):
+            self.menu_lb.insert(i, options[i])
+
+        self.pic = PhotoImage(file=r"menu.png")
+        self.menu = Button(win, image=self.pic, width=35, height=30,
+                           bg="#add8e6", bd=0, command=lambda: self.select('m'))
+
+        self.menu.place(x=0, y=0)
