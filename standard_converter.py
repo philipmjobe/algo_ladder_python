@@ -9,6 +9,7 @@
 # Finally, create four buttons and provide your social media links using “webbrowser” module.
 # And you have to download/create four images to represent your social media links.
 
+# from ast import operator
 from cgitb import text
 from tkinter import *
 import tkinter as tk
@@ -166,3 +167,81 @@ class converter():
 
         self.disp1 = Label(win, text=self.lb_menu[1], bg="#ffffff", fg="black")
         self.disp1.place(x=120, y=410, width=100, height=20)
+
+        scroll_dwn = Button(win, image=self.down, width=14, height=18,
+                            bd=0, command=lambda: self.select(1), bg="#f5f5f5")
+
+        scroll_dwn.place(x=220, y=410)
+
+        self.form = StringVar()
+        self.formulate = Label(win, text="", bg="#189AB4",
+                               fg="white", font=("Helvetica", 10))
+
+        self.formulate.place(x=50, y=450, width=250, height=25)
+
+        self.para = unit["para"]
+        self.para1 = unit["para1"]
+
+    def set_unit(self, unit):
+        global exp_in, exp_out
+
+        exp_in = ""
+        exp_out = ""
+
+        self.inp_stg.set("")
+        self.opt_stg.set("")
+
+        self.unit = unit
+
+        self.lb_menu = unit["lb"]
+
+        self.lb.delete(0, END)
+
+        self.lb1.delete(0, END)
+
+        self.lb.place(y=0, height=0)
+        self.lb1.place(y=250, height=0)
+
+        self.disp['text'] = self.lb_menu[0]
+        self.disp1['text'] = self.lb_menu[1]
+
+        self.para = unit["para"]
+        self.para1 = unit["para1"]
+
+        for i in range(len(self.lb_menu)):
+            self.lb1.insert(END, self.lb_menu[i])
+            self.lb.insert(i, self.lb_menu[i])
+
+        self.formulate['text'] = "Formulae: " + operator.replace("{}", "Unit")
+
+        center(wind, 500, 230)
+        win.update()
+
+    def operation(self, event):
+        golbal exp_in, operator, exp_out
+
+        self.inp_unit = self.disp['text']
+        self.opt_unit = self.disp1['text']
+
+        try:
+            widget = event.widget
+
+            if(widget == self.inp):
+                win.update()
+
+                index = self.unit[self.opt_unit][-1]
+                operator = self.unit[self.inp_unit][index]
+
+                if(event.char >= '0' and event.char <= '9'):
+                    exp_in = self.inp_stg.get()
+
+                    exp_out = str(eval(operator.format(exp_in)))
+                    self.opt_stg.set(exp_out)
+
+                elif((event.char == '\b') or (len(self.inp_stg.get()) == '0' and event.char <= '9')):
+
+                    exp_out = self.opt_stg.get()
+                    exp_in = str(eval(operator.format(exp_out)))
+                    self.inp_stg.set(exp_in)
+
+                elif(event.char == '\b' or (len(self.opt_stg.get()))):
