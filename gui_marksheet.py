@@ -148,3 +148,12 @@ e4.grid(row=3, column=2)
 e5.grid(row=4, column=2)
 e6.grid(row=5, column=2)
 e7.grid(row=6, column=2)
+
+
+tk.Label(master, text="Sub Credit").grid(row=2, column=3)
+tk.Label(master, text="4").grid(row=3, column=3)
+tk.Label(master, text="4").grid(row=4, column=3)
+tk.Label(master, text="3").grid(row=5, column=3)
+tk.Label(master, text="4").grid(row=6, column=3)
+
+tk.Label(master, text="Credit obtained").grid(row=2, column=4)
