@@ -62,9 +62,33 @@ def display():
         tot += 28
 
     if e5.get() == "P":
-        tk.Label(master, text="24").grid(row=4, column=4)
+        tk.Label(master, text="28").grid(row=4, column=4)
         tot += 24
 
     if e5.get() == "F":
         tk.Label(master, text="0").grid(row=4, column=4)
+        tot += 0
+
+    if e6.get() == "A":
+        tk.Label(master, text="30").grid(row=5, column=4)
+        tot += 30
+
+    if e6.get() == "B":
+        tk.Label(master, text="27").grid(row=5, column=4)
+        tot += 27
+
+    if e6.get() == "C":
+        tk.Label(master, text="24").grid(row=5, column=4)
+        tot += 24
+
+    if e6.get() == "D":
+        tk.Label(master, text="21").grid(row=5, column=4)
+        tot += 21
+
+    if e6.get() == "P":
+        tk.Label(master, text="28").grid(row=5, column=4)
+        tot += 24
+
+    if e6.get() == "F":
+        tk.Label(master, text="0").grid(row=5, column=4)
         tot += 0
