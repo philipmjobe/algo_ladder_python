@@ -141,3 +141,10 @@ tk.Label(master, text="CS 201").grid(row=3, column=1)
 tk.Label(master, text="CS 202").grid(row=4, column=1)
 tk.Label(master, text="MA 201").grid(row=5, column=1)
 tk.Label(master, text="EC 201").grid(row=6, column=1)
+
+
+tk.Label(master, text="Grade").grid(row=2, column=2)
+e4.grid(row=3, column=2)
+e5.grid(row=4, column=2)
+e6.grid(row=5, column=2)
+e7.grid(row=6, column=2)
