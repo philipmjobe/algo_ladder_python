@@ -92,3 +92,27 @@ def display():
     if e6.get() == "F":
         tk.Label(master, text="0").grid(row=5, column=4)
         tot += 0
+
+    if e7.get() == "A":
+        tk.Label(master, text="40").grid(row=6, column=4)
+        tot += 40
+
+    if e7.get() == "B":
+        tk.Label(master, text="36").grid(row=6, column=4)
+        tot += 36
+
+    if e7.get() == "C":
+        tk.Label(master, text="32").grid(row=6, column=4)
+        tot += 32
+
+    if e7.get() == "D":
+        tk.Label(master, text="28").grid(row=6, column=4)
+        tot += 28
+
+    if e7.get() == "P":
+        tk.Label(master, text="28").grid(row=6, column=4)
+        tot += 24
+
+    if e7.get() == "F":
+        tk.Label(master, text="0").grid(row=6, column=4)
+        tot += 0
