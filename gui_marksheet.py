@@ -162,3 +162,7 @@ tk.Label(master, text="Credit obtained").grid(row=2, column=4)
 e1 = tk.Entry(master)
 e2 = tk.Entry(master)
 e3 = tk.Entry(master)
+
+e1.grid(row=0, column=1)
+e2.grid(row=0, column=4)
+e3.grid(row=1, column=1)
