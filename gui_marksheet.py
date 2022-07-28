@@ -157,3 +157,8 @@ tk.Label(master, text="3").grid(row=5, column=3)
 tk.Label(master, text="4").grid(row=6, column=3)
 
 tk.Label(master, text="Credit obtained").grid(row=2, column=4)
+
+
+e1 = tk.Entry(master)
+e2 = tk.Entry(master)
+e3 = tk.Entry(master)
