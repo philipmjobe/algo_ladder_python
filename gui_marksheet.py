@@ -1,5 +1,6 @@
 # Create a python GUI mark sheet. Where credits of each subject are given, enter the grades obtained in each subject and click on Submit. The credits per subject, the total credits as well as the SGPA are displayed after being calculated automatically. Use Tkinter to create the GUI interface.
 
+from itertools import count
 import tkinter as tk
 
 master = tk.Tk()
@@ -116,3 +117,12 @@ def display():
     if e7.get() == "F":
         tk.Label(master, text="0").grid(row=6, column=4)
         tot += 0
+
+    tk.Label(master, text=str(tot)).grid(row=7, column=4)
+
+    tk.Label(master, text=str(tot/15)).grid(row=8, column=4)
+
+
+tk.Label(master, text="Name").grid(row=0, column=0)
+tk.Label(master, text="Reg.No").grid(row=0, column=3)
+tk.Label(master, text="Roll.No").grid(row=1, column=0)
