@@ -126,3 +126,10 @@ def display():
 tk.Label(master, text="Name").grid(row=0, column=0)
 tk.Label(master, text="Reg.No").grid(row=0, column=3)
 tk.Label(master, text="Roll.No").grid(row=1, column=0)
+
+
+tk.Label(master, text="Srl.No").grid(row=2, column=0)
+tk.Label(master, text="1").grid(row=3, column=0)
+tk.Label(master, text="2").grid(row=4, column=0)
+tk.Label(master, text="3").grid(row=5, column=0)
+tk.Label(master, text="4").grid(row=6, column=0)
