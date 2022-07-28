@@ -1,6 +1,7 @@
 # Create a python GUI mark sheet. Where credits of each subject are given, enter the grades obtained in each subject and click on Submit. The credits per subject, the total credits as well as the SGPA are displayed after being calculated automatically. Use Tkinter to create the GUI interface.
 
 from itertools import count
+from sqlite3 import Row
 import tkinter as tk
 
 master = tk.Tk()
@@ -133,3 +134,10 @@ tk.Label(master, text="1").grid(row=3, column=0)
 tk.Label(master, text="2").grid(row=4, column=0)
 tk.Label(master, text="3").grid(row=5, column=0)
 tk.Label(master, text="4").grid(row=6, column=0)
+
+
+tk.Label(master, text="Subject").grid(row=2, column=1)
+tk.Label(master, text="CS 201").grid(row=3, column=1)
+tk.Label(master, text="CS 202").grid(row=4, column=1)
+tk.Label(master, text="MA 201").grid(row=5, column=1)
+tk.Label(master, text="EC 201").grid(row=6, column=1)
