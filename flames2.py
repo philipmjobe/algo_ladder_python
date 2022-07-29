@@ -58,3 +58,11 @@ def tell_status():
             result = result[: len(result) - 1]
 
     Status_field.insert(10, result[0])
+
+
+def clear_all():
+    Player1_field.delete(0, END)
+    Player2_field.delete(0, END)
+    Status_field.delete(0, END)
+
+    Player1_field.focus_set()
