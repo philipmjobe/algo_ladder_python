@@ -66,3 +66,37 @@ def clear_all():
     Status_field.delete(0, END)
 
     Player1_field.focus_set()
+
+
+if __name__ == "__main__":
+    root = Tk()
+    root.configure(background='light green')
+    root.geometry("350x125")
+    root.title("Flames Game")
+
+    label1 = Label(root, text="Player 1 Name: ", fg='black', bg='dark green')
+    label2 = Label(root, text="Player 2 Name: ", fg='black', bg='dark green')
+    label3 = Label(root, text="Relationship Status: ", fg='black', bg='red')
+
+    label1.grid(row=1, column=0, sticky="E")
+    label2.grid(row=2, column=0, sticky="E")
+    label3.grid(row=4, column=0, sticky="E")
+
+    Player1_field = Entry(root)
+    Player2_field = Entry(root)
+    Status_field = Entry(root)
+
+    Player1_field.grid(row=1, column=1, ipadx="50")
+    Player2_field.grid(row=2, column=1, ipadx="50")
+    Status_field.grid(row=4, column=1, ipadx="50")
+
+    button1 = Button(root, text="Submit", bg="red",
+                     fg="black", command=tell_status)
+
+    button2 = Button(root, text="Clear", bg="red",
+                     fg="black", command=clear_all)
+
+    button1.grid(row=3, column=1)
+    button2.grid(row=5, column=1)
+
+    root, mainloop()
