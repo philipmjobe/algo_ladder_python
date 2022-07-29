@@ -46,3 +46,15 @@ def countdown():
         timeLabel.config(text="Time left: " + str(timeleft))
 
         timeLabel.after(1000, countdown)
+
+
+root = tkinter.Tk()
+
+root.title("COLORGAME")
+
+root.geometry("375x200")
+
+instructions = tkinter.Label(
+    root, text="Type in the color" "of the words, and not the word text!", font=('Helvetica', 12))
+
+instructions.pack()
