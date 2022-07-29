@@ -58,3 +58,15 @@ instructions = tkinter.Label(
     root, text="Type in the color" "of the words, and not the word text!", font=('Helvetica', 12))
 
 instructions.pack()
+
+scoreLabel = tkinter.Label(
+    root, text="Press enter to start", font=('Helvetica', 12))
+
+scoreLabel.pack()
+
+timeLabel = tkinter.Label(root, text="Time left: " +
+                          str(timeleft), font=('Helvetica', 12))
+
+timeLabel.pack()
+
+label = tkinter.Label(root, font=('Helvetica', 60))
