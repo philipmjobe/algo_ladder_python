@@ -70,3 +70,12 @@ timeLabel = tkinter.Label(root, text="Time left: " +
 timeLabel.pack()
 
 label = tkinter.Label(root, font=('Helvetica', 60))
+
+e = tkinter.Entry(root)
+
+root.bind('<Return>', startGame)
+e.pack()
+
+e.focus_set()
+
+root.mainloop()
