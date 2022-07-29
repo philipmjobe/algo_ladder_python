@@ -35,3 +35,14 @@ def nextColor():
         label.config(fg=str(colors[1]), text=str(colors[0]))
 
         scoreLabel.config(text="Score: " + str(score))
+
+
+def countdown():
+    global timeleft
+
+    if timeleft > 0:
+        timeleft -= 1
+
+        timeLabel.config(text="Time left: " + str(timeleft))
+
+        timeLabel.after(1000, countdown)
