@@ -1,0 +1,1 @@
+# Have you ever wondered to make a Image viewer with the help of Python? Here is a solution to making the Image viewer with the help of Python. We can do this with the help of Tkinter and pillow. We will discuss the module needed and code below.
