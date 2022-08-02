@@ -46,7 +46,7 @@ def Widgets():
 def Browse():
 
     download_Directory = filedialog.askdirectory(
-        initialdir="users/philipjobe/downloads/test downloads", title="Save Video")
+        initialdir="users/philipjobe/downloads/test_downloads", title="Save Video")
 
     download_Path.set(download_Directory)
 
@@ -64,3 +64,18 @@ def Download():
 
     messagebox.showinfo(
         "SUCESSFULLY", "DOWNLOAED AND SAVED IN\n" + download_Folder)
+
+
+root = tk.Tk()
+
+root.geometry("520x280")
+root.resizable(False, False)
+root.title("YouTube Video Downloader")
+root.config(background="PaleGreen1")
+
+video_Link = StringVar()
+download_Path = StringVar()
+
+Widgets()
+
+root.mainloop()
