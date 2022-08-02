@@ -49,3 +49,18 @@ def Browse():
         initialdir="users/philipjobe/downloads/test downloads", title="Save Video")
 
     download_Path.set(download_Directory)
+
+
+def Download():
+    Youtube_link = video_Link.get()
+
+    download_Folder = download_Path.get()
+
+    getVideo = YouTube(Youtube_link)
+
+    videoStream = getVideo.streams.first()
+
+    videoStream.download(download_Folder)
+
+    messagebox.showinfo(
+        "SUCESSFULLY", "DOWNLOAED AND SAVED IN\n" + download_Folder)
