@@ -41,3 +41,11 @@ def Widgets():
                         bg="thistle1", pady=10, padx=15, relief=GROOVE, font="Georgia 13")
 
     Download_B.grid(row=4, column=1, pady=20, padx=20)
+
+
+def Browse():
+
+    download_Directory = filedialog.askdirectory(
+        initialdir="users/philipjobe/downloads/test downloads", title="Save Video")
+
+    download_Path.set(download_Directory)
