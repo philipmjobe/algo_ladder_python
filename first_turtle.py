@@ -22,10 +22,29 @@ import turtle
 
 # DRAWING A SQUARE USING A LOOP
 
+# t = turtle.Turtle()
+
+# s = int(input("Enter the length of the side of the square: "))
+
+# for _ in range(4):
+#     t.forward(s)
+#     t.left(90)
+
+# DRAWING A RECTANGLE
+
 t = turtle.Turtle()
 
-s = int(input("Enter the length of the side of the square: "))
+l = int(input("Enter the length of the rectangle: "))
+w = int(input("Enter the width of the rectangle: "))
 
-for _ in range(4):
-    t.forward(s)
-    t.left(90)
+t.forward(l)
+t.left(90)
+
+t.forward(w)
+t.left(90)
+
+t.forward(l)
+t.left(90)
+
+t.forward(w)
+t.left(90)
