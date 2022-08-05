@@ -4,18 +4,28 @@
 
 import turtle
 
+# t = turtle.Turtle()
+
+# s = int(input("Enter the length of the side of the Square: "))
+
+# t.forward(s)
+# t.left(90)
+
+# t.forward(s)
+# t.left(90)
+
+# t.forward(s)
+# t.left(90)
+
+# t.forward(s)
+# t.left(90)
+
+# DRAWING A SQUARE USING A LOOP
+
 t = turtle.Turtle()
 
-s = int(input("Enter the length of the side of the Square: "))
+s = int(input("Enter the length of the side of the square: "))
 
-t.forward(s)
-t.left(90)
-
-t.forward(s)
-t.left(90)
-
-t.forward(s)
-t.left(90)
-
-t.forward(s)
-t.left(90)
+for _ in range(4):
+    t.forward(s)
+    t.left(90)
