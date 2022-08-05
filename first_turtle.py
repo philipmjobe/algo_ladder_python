@@ -32,19 +32,35 @@ import turtle
 
 # DRAWING A RECTANGLE
 
+# t = turtle.Turtle()
+
+# l = int(input("Enter the length of the rectangle: "))
+# w = int(input("Enter the width of the rectangle: "))
+
+# t.forward(l)
+# t.left(90)
+
+# t.forward(w)
+# t.left(90)
+
+# t.forward(l)
+# t.left(90)
+
+# t.forward(w)
+# t.left(90)
+
+# RECTANGLE WITH A LOOP
+
 t = turtle.Turtle()
 
 l = int(input("Enter the length of the rectangle: "))
 w = int(input("Enter the width of the rectangle: "))
 
-t.forward(l)
-t.left(90)
+for _ in range(4):
+    if _ % 2 == 0:
+        t.forward(l)
+        t.left(90)
 
-t.forward(w)
-t.left(90)
-
-t.forward(l)
-t.left(90)
-
-t.forward(w)
-t.left(90)
+    else:
+        t.forward(w)
+        t.left(90)
